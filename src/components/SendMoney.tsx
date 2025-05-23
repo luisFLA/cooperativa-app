@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
-import { CoopContext } from "../Context/CoopContext";
+import { CoopContext } from "../Context/Coopcontext";
 
 export default function SendMoney() {
   const { transfer } = useContext(CoopContext);

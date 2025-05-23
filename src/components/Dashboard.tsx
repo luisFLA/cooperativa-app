@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 import { View, Text, Button, FlatList, StyleSheet } from "react-native";
-import { CoopContext } from "../Context/CoopContext";
+import { CoopContext } from "../Context/Coopcontext";
 
 export default function Dashboard() {
   const { balance, addFunds, transactions } = useContext(CoopContext);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bienvenido a Cooperativa App</Text>
+      <Text style={styles.title}>Cooperativa App</Text>
       <Text style={styles.balance}>Available Balance: L. {balance.toFixed(2)}</Text>
       <Button title="Add Funds" onPress={addFunds} />
-      <Text style={styles.subtitle}>Transferencias Realizada:</Text>
+      <Text style={styles.subtitle}>Recent Transactions:</Text>
       <FlatList
         data={transactions}
         keyExtractor={(item, index) => index.toString()}
